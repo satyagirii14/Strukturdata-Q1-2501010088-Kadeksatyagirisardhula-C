@@ -15,5 +15,29 @@ Sebaliknya, Array disimpan dalam memori kontinu, sehingga penyisipan atau pengha
 
 ## 3. Konsep Doubly Linked List
 Jelaskan struktur anatomi dari sebuah node pada Doubly Linked List. Apa dampak keberadaan pointer tambahan tersebut terhadap penggunaan memori serta fleksibilitas penelusuran dibandingkan dengan Singly Linked List?
-## Jawaban
+## Jawaban:
+Doubly Linked List mengorbankan memori ekstra untuk menyimpan pointer tambahan, tetapi memberikan fleksibilitas lebih besar dalam penelusuran dan manipulasi data. Singly Linked List lebih hemat memori dan sederhana, namun terbatas pada penelusuran satu arah dan operasi tertentu menjadi lebih sulit.
+DLL biasanya dipilih untuk aplikasi yang membutuhkan navigasi dua arah, seperti undo-redo, riwayat browser, atau playlist musik.
+
+## 4. Mekanisme Circular Linked List
+Apa yang membedakan Circular Linked List dari Linked List biasa secara teoritis? Sebutkan satu contoh skenario penggunaan (use case) di mana struktur melingkar ini lebih efektif digunakan.
+## jawaban:
+Perbedaan Circular Linked List dengan Linked List Biasa
+Secara teoritis, perbedaan utama antara Circular Linked List (CLL) dan Linked List biasa (Singly/Doubly Linked List) terletak pada hubungan node terakhir:
+- Linked List biasa
+Node terakhir (tail) menunjuk ke null, menandakan akhir dari list.
+- Circular Linked List
+Node terakhir tidak menunjuk ke null, melainkan kembali ke node pertama (head), sehingga membentuk struktur melingkar.
+Akibatnya, dalam CLL:
+- Tidak ada node yang benar-benar menjadi akhir, karena traversal bisa berputar terus-menerus.
+- Penelusuran bisa dimulai dari node mana saja dan tetap bisa menjangkau seluruh list.
+Salah satu skenario penggunaan yang efektif adalah implementasi antrian proses dalam sistem operasi (Round Robin Scheduling).
+- Proses-proses ditempatkan dalam Circular Linked List.
+- CPU akan mengeksekusi setiap proses secara bergiliran, lalu kembali ke proses pertama setelah mencapai akhir, tanpa perlu reset manual.
+- Hal ini memastikan distribusi waktu yang adil dan berulang bagi semua proses.
+
+## 5. Array Dinamis di Python
+Python list secara internal diimplementasikan sebagai Dynamic Array. Jelaskan mekanisme yang terjadi ”di balik layar” ketika sebuah Dynamic Array kehabisan kapasitas saat melakukan operasi append.
+## jawaban:
+Saat append kehabisan kapasitas, Python list tidak sekadar menambah satu slot, melainkan melakukan realokasi memori lebih besar, menyalin elemen lama, lalu menambahkan elemen baru. Strategi ini menjaga keseimbangan antara efisiensi waktu dan penggunaan memori ekstra.
 
