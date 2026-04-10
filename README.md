@@ -1,0 +1,1 @@
+# Strukturdata-Q1-2501010088-Kadeksatyagirisardhula-C
