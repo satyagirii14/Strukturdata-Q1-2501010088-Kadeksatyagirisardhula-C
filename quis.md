@@ -1,4 +1,4 @@
-##1.Karakteristik Memori dan Akses Data
+*1.Karakteristik Memori dan Akses Data
 
 Jelaskan mengapa operasi akses elemen pada Array dapat dilakukan dalam waktu konstan
 O(1), sedangkan pada Singly Linked List membutuhkan waktu linear O(n). Hubungkan
